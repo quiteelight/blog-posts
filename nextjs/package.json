@@ -1,0 +1,25 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "run:all": "node scripts/run-lighthouse.mjs",
+    "csr": "lighthouse http://localhost:3000/csr --preset=desktop --throttling-method=provided --output=html --output-path=./results/csr.html",
+    "ssr": "lighthouse http://localhost:3000/ssr --preset=desktop --throttling-method=provided --output=html --output-path=./results/ssr.html",
+    "ssg": "lighthouse http://localhost:3000/ssg --preset=desktop --throttling-method=provided --output=html --output-path=./results/ssg.html",
+    "isr": "lighthouse http://localhost:3000/isr --preset=desktop --throttling-method=provided --output=html --output-path=./results/isr.html"
+  },
+  "dependencies": {
+    "next": "16.1.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "lighthouse": "^13.1.0",
+    "tailwindcss": "^4"
+  }
+}
